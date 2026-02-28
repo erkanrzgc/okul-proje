@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+import 'ayarlar.dart';
+import 'urunler.dart';
+
+// Navigasyonu kontrol eden ana yapı
+class Discover extends StatefulWidget {
+  const Discover({super.key});
+
+  @override
+  State<Discover> createState() => _DiscoverState();
+}
+
+class _DiscoverState extends State<Discover> {
+  int _selectedIndex = 0;
+
+  // Sayfa Listesi
+  static final List<Widget> _pages = [
+    const Center(child: Text('Ana Sayfa', style: TextStyle(fontSize: 24))),
+    const Urunler(),
+//    const Urunler(),
+    const Center(child: Text('Favoriler Sayfası', style: TextStyle(fontSize: 24))),
+    const Ayarlar(baslik:'Bottom Navigator'),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: IndexedStack( // Sayfa durumunu korumak için IndexedStack kullanıyoruz
+        index: _selectedIndex,
+        children: _pages,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.teal,
+        unselectedItemColor: Colors.grey,
+        onTap: _onItemTapped, // Tıklama olayını yönetiyoruz
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Ana Sayfa'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Urunler'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Favoriler'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Ayarlar'),
+        ],
+      ),
+    );
+  }
+}
+

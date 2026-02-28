@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 /*import 'homepage.dart';
 import 'ayarlar.dart';
-import 'giris.dart';*/
-import 'kesfet.dart';
+import 'giris.dart';
+import 'kesfet.dart';*/
+import 'discover.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       //      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-            home: const Kesfet(),
+      //      home: const Kesfet(),
+        home: const Discover(),
 
       /*initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
       routes: {
