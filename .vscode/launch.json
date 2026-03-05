@@ -8,18 +8,6 @@
             "name": "myapp",
             "request": "launch",
             "type": "dart"
-        },
-        {
-            "name": "myapp (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "myapp (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
         }
     ]
 }
