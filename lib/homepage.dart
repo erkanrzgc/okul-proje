@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Menuler/AppDrawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ana Sayfa')),
+      drawer: AppDrawer(),
       body: Column(
         children: [
           Row(

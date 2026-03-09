@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/login.dart';
-/*import 'homepage.dart';
+//import 'package:myapp/login.dart';
+import 'homepage.dart';
 import 'ayarlar.dart';
 import 'giris.dart';
-import 'kesfet.dart';
-import 'discover.dart';*/
+//import 'kesfet.dart';
+//import 'discover.dart';
 
 
 void main() {
@@ -25,14 +25,14 @@ class MyApp extends StatelessWidget {
       //      home: const MyHomePage(title: 'Flutter Demo Home Page'),
       //      home: const Kesfet(),
       // home: const Discover(),
-      home: const LoginPage(),
+      //home: const LoginPage(),
 
-      /*initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
+      initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
       routes: {
         '/': (context) => HomePage(),
         '/giris': (context) => Giris(),
         '/ayarlar': (context) => Ayarlar(baslik:'Ayar Sayfası'),
-      },*/
+      },
     );
   }
 }
