@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Menuler/AppDrawer.dart';
+import 'package:myapp/Menuler/appdrawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,12 +12,14 @@ class HomePage extends StatelessWidget {
         children: [
           Row(
             children: [
+              /*
               ElevatedButton(
                 onPressed: ()=>{
                   Navigator.pushNamed(context, '/giris'),
                 },
                 child: const Text("Login Sayfasına Git"),
               ),
+              */
             ],
           ),
         ],

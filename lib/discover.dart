@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Menuler/appdrawer.dart';
 import 'ayarlar.dart';
 import 'urunler.dart';
 
@@ -17,7 +18,6 @@ class _DiscoverState extends State<Discover> {
   static final List<Widget> _pages = [
     const Center(child: Text('Ana Sayfa', style: TextStyle(fontSize: 24))),
     const Urunler(),
-//    const Urunler(),
     const Center(child: Text('Favoriler Sayfası', style: TextStyle(fontSize: 24))),
     const Ayarlar(baslik:'Bottom Navigator'),
   ];
@@ -31,6 +31,8 @@ class _DiscoverState extends State<Discover> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Discover")),
+      drawer: AppDrawer(),
       body: IndexedStack( // Sayfa durumunu korumak için IndexedStack kullanıyoruz
         index: _selectedIndex,
         children: _pages,

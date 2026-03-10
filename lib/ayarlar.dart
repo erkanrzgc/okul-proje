@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Menuler/appdrawer.dart';
 
 class Ayarlar extends StatelessWidget {
   const Ayarlar({super.key,required this.baslik});
@@ -7,8 +8,10 @@ class Ayarlar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(baslik)),
+      drawer: AppDrawer(),
       body:  Column(
           children: [
+            /*
             Text("Ayar Sayfası"), 
             ElevatedButton(
               onPressed: ()=>{
@@ -16,6 +19,7 @@ class Ayarlar extends StatelessWidget {
               }, // Butona basınca popup göster.
               child: const Text("Ana sayfaya git"),
             ),
+            */
           ],
         ),
     );

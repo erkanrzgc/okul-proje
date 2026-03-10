@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Menuler/appdrawer.dart';
 
 class LoginPage extends StatefulWidget {
    const LoginPage({super.key});
@@ -32,6 +33,7 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(title: const Text("Login Sayfası")), // Üstte başlık çubuğu.
       body: Padding(
         padding: const EdgeInsets.all(16.0), // Sayfanın iç kenar boşluğu.

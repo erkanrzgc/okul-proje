@@ -1,23 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Menuler/appdrawer.dart';
 
 class Kesfet extends StatelessWidget {
   const Kesfet({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FE),
+
       // Üst Bilgi (Header)
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Padding(
+        leading: 
+        /*const Padding(
           padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundColor: Color(0xFFE0E0E0),
             child: Icon(Icons.person, color: Colors.grey),
           ),
-        ),
+        ),*/
+        Builder(
+          builder: (context) => GestureDetector(
+            onTap: () => Scaffold.of(context).openDrawer(), // Çekmeceyi açan kod
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFE0E0E0),
+                child: Icon(Icons.person, color: Colors.grey),
+                ),
+                ),
+                ),
+                ),
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.black87),
@@ -25,6 +41,7 @@ class Kesfet extends StatelessWidget {
           ),
         ],
       ),
+      drawer: AppDrawer(), //leading override ediyor
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(

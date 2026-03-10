@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../login.dart';
 import '../ayarlar.dart';
+import '../kesfet.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -13,13 +14,16 @@ class AppDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(color: Colors.blue),
-            child: Text('Menü', style: TextStyle(color: Colors.white, fontSize: 24)),
+            child: Text(
+              'Menü',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Ana Sayfa'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.pushNamed(context, '/');
             },
           ),
           ListTile(
@@ -33,8 +37,31 @@ class AppDrawer extends StatelessWidget {
                   builder: (context) => Ayarlar(baslik: "Ayarlar"),
                 ),
               );
-
             },
+          ),
+          Column(
+            children: [
+              Text('Keşfet Alanı'),
+              Divider(),
+              ],
+              ),
+          ListTile(
+            title: Text('Keşfet'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Kesfet()),
+            ),
+          ),
+          ListTile(
+            title: Text('Discover'),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, '/Discover'),
+          ),
+          const Divider(),
+           ListTile(
+            title: Text('Deneme'),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, '/Deneme'),
           ),
           const Divider(),
           ListTile(
@@ -43,17 +70,15 @@ class AppDrawer extends StatelessWidget {
               Navigator.pop(context); // Drawer kapat
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ),
+                MaterialPageRoute(builder: (context) => LoginPage()),
               );
-            },//Provider.of<LoginPage>(context, listen: false).signOut(),
-              leading: IconButton(
-                icon: Icon(Icons.logout),
-                onPressed: () {
-                  //Provider.of<GirisServis>(context, listen: false).signOut();
-                  },
-              ),
+            }, //Provider.of<LoginPage>(context, listen: false).signOut(),
+            leading: IconButton(
+              icon: Icon(Icons.logout),
+              onPressed: () {
+                //Provider.of<GirisServis>(context, listen: false).signOut();
+              },
+            ),
           ),
           /*
           ListTile(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Menuler/appdrawer.dart';
 
 class Giris extends StatelessWidget {
   Giris({super.key});
@@ -9,6 +10,7 @@ class Giris extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Login Sayfası')),
+      drawer: AppDrawer(),
       body:  Column(
           children: [
             TextField(
