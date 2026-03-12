@@ -9,6 +9,7 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      //backgroundColor: Colors.limeAccent,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -16,7 +17,7 @@ class AppDrawer extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.blue),
             child: Text(
               'Menü',
-              style: TextStyle(color: Colors.white, fontSize: 24),
+              style: TextStyle(color: Colors.white, fontSize: 24,backgroundColor: Colors.blueGrey),
             ),
           ),
           ListTile(
@@ -80,18 +81,21 @@ class AppDrawer extends StatelessWidget {
               },
             ),
           ),
+          ListTile(
+           title:Text('Öğrenci Listesi'), 
+          ),
           /*
           ListTile(
             title: const Text('Görev Ekle'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/addTask'),
+            //onTap: () => Navigator.pushReplacementNamed(context, '/addTask'),
           ),
           ListTile(
             title: const Text('Görev Listesi'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/taskList'),
+            //onTap: () => Navigator.pushReplacementNamed(context, '/taskList'),
           ),
           ListTile(
             title: const Text('Öğrenci Listesi'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/ogrenciListesi'),
+            //onTap: () => Navigator.pushReplacementNamed(context, '/ogrenciListesi'),
           ),
           ListTile(
             title: const Text('Shared Preferences'),
@@ -100,10 +104,6 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             title: const Text('Çıkış yap'),
             onTap: () => Navigator.pushReplacementNamed(context, '/login'),
-          ),
-          ListTile(
-            title: const Text('Çıkış yap'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/notlar'),
           ),*/
         ],
       ),

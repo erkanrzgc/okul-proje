@@ -2,26 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:myapp/Menuler/appdrawer.dart';
 import 'ayarlar.dart';
 import 'urunler.dart';
+import 'giris.dart';
 
 // Navigasyonu kontrol eden ana yapı
 class Discover extends StatefulWidget {
   const Discover({super.key});
-
   @override
   State<Discover> createState() => _DiscoverState();
 }
 
 class _DiscoverState extends State<Discover> {
   int _selectedIndex = 0;
-
   // Sayfa Listesi
   static final List<Widget> _pages = [
-    const Center(child: Text('Ana Sayfa', style: TextStyle(fontSize: 24))),
+    const Center(child: Text('Ana', style: TextStyle(fontSize: 24))),
     const Urunler(),
-    const Center(child: Text('Favoriler Sayfası', style: TextStyle(fontSize: 24))),
-    const Ayarlar(baslik:'Bottom Navigator'),
+    //    const Center(child: Text('Favoriler', style: TextStyle(fontSize: 24))),
+    const Ayarlar(baslik: 'Ayarlar sayfası Bottom Navigatordan çağrılıyor'),
+    Giris(),
   ];
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -33,7 +32,8 @@ class _DiscoverState extends State<Discover> {
     return Scaffold(
       appBar: AppBar(title: Text("Discover")),
       drawer: AppDrawer(),
-      body: IndexedStack( // Sayfa durumunu korumak için IndexedStack kullanıyoruz
+      body: IndexedStack(
+        // Sayfa durumunu korumak için IndexedStack kullanıyoruz
         index: _selectedIndex,
         children: _pages,
       ),
@@ -46,11 +46,13 @@ class _DiscoverState extends State<Discover> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Ana Sayfa'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Urunler'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: 'Favoriler'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            label: 'Favoriler',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Ayarlar'),
         ],
       ),
     );
   }
 }
-

@@ -11,7 +11,7 @@ class Ayarlar extends StatelessWidget {
       drawer: AppDrawer(),
       body:  Column(
           children: [
-            /*
+            
             Text("Ayar Sayfası"), 
             ElevatedButton(
               onPressed: ()=>{
@@ -19,7 +19,7 @@ class Ayarlar extends StatelessWidget {
               }, // Butona basınca popup göster.
               child: const Text("Ana sayfaya git"),
             ),
-            */
+            
           ],
         ),
     );
