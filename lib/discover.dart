@@ -15,9 +15,9 @@ class _DiscoverState extends State<Discover> {
   int _selectedIndex = 0;
   // Sayfa Listesi
   static final List<Widget> _pages = [
-    const Center(child: Text('Ana', style: TextStyle(fontSize: 24))),
+    const Center(child: Text('Ana Sayfa', style: TextStyle(fontSize: 24))),
     const Urunler(),
-    //    const Center(child: Text('Favoriler', style: TextStyle(fontSize: 24))),
+//    const Center(child: Text('Favoriler', style: TextStyle(fontSize: 24))),
     const Ayarlar(baslik: 'Ayarlar sayfası Bottom Navigatordan çağrılıyor'),
     Giris(),
   ];
@@ -41,15 +41,12 @@ class _DiscoverState extends State<Discover> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.teal,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: const Color.fromRGBO(158, 158, 158, 1),
         onTap: _onItemTapped, // Tıklama olayını yönetiyoruz
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Ana Sayfa'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Urunler'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            label: 'Favoriler',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border),label: 'Favoriler',),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Ayarlar'),
         ],
       ),

@@ -15,8 +15,7 @@ class AppDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(color: Colors.blue),
-            child: Text(
-              'Menü',
+            child: Text('Menü',
               style: TextStyle(color: Colors.white, fontSize: 24,backgroundColor: Colors.blueGrey),
             ),
           ),
@@ -63,6 +62,12 @@ class AppDrawer extends StatelessWidget {
             title: Text('Deneme'),
             onTap: () =>
                 Navigator.pushReplacementNamed(context, '/Deneme'),
+          ),
+                    const Divider(),
+           ListTile(
+            title: Text('Ana Ekran'),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, '/AnaEkran'),
           ),
           const Divider(),
           ListTile(

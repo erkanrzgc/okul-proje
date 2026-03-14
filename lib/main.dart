@@ -6,6 +6,7 @@ import 'ayarlar.dart';
 import 'giris.dart';
 import 'kesfet.dart';
 import 'Deneme/deneme.dart';
+import 'deneme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/Kesfet': (context) => Kesfet(),
         '/Discover': (context) => Discover(),
         '/Deneme': (context) => Deneme(),
+        '/AnaEkran': (context) => AnaEkran(),
       },
     );
   }
