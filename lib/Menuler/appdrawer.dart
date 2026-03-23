@@ -43,31 +43,30 @@ class AppDrawer extends StatelessWidget {
             children: [
               Text('Keşfet Alanı'),
               Divider(),
-              ],
-              ),
+            ],
+          ),
           ListTile(
             title: Text('Keşfet'),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Kesfet()),
-            ),
+            onTap: () => Navigator.push( context, MaterialPageRoute(builder: (context) => Kesfet()), ),
           ),
           ListTile(
             title: Text('Discover'),
-            onTap: () =>
-                Navigator.pushReplacementNamed(context, '/Discover'),
+            onTap: () => Navigator.pushReplacementNamed(context, '/Discover'),
           ),
-          const Divider(),
-           ListTile(
-            title: Text('Deneme'),
-            onTap: () =>
-                Navigator.pushReplacementNamed(context, '/Deneme'),
+          Column(
+            children: [
+              Text('Uygulamalar Alanı'),
+              Divider(),
+            ],
           ),
-                    const Divider(),
+          ListTile(
+            title: Text('Dinamik Drawer Uygulaması'),
+            onTap: () => Navigator.pushReplacementNamed(context, '/DinamikDrawerUygulaması'),
+          ),
            ListTile(
-            title: Text('Ana Ekran'),
-            onTap: () =>
-                Navigator.pushReplacementNamed(context, '/AnaEkran'),
+            title: const Text('Bottom Navigation Uygulaması'),
+            onTap: () => Navigator.pushReplacementNamed(context, '/BottomNavigationUygulaması'),
+
           ),
           const Divider(),
           ListTile(
@@ -86,14 +85,14 @@ class AppDrawer extends StatelessWidget {
               },
             ),
           ),
-          ListTile(
-           title:Text('Öğrenci Listesi'), 
+          
+          const Divider(),
+           ListTile(
+            title: Text('Deneme'),
+            onTap: () =>
+                Navigator.pushReplacementNamed(context, '/Deneme'),
           ),
           /*
-          ListTile(
-            title: const Text('Görev Ekle'),
-            //onTap: () => Navigator.pushReplacementNamed(context, '/addTask'),
-          ),
           ListTile(
             title: const Text('Görev Listesi'),
             //onTap: () => Navigator.pushReplacementNamed(context, '/taskList'),

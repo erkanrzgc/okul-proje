@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/BottomNavigationUygulamasi/mainlayoutview.dart';
+import 'package:myapp/DinamikDrawerUygulamasi/dinamikdraweruygulamasi.dart';
+import 'package:myapp/DinamikDrawerUygulamasi/loginview.dart';
 import 'package:myapp/discover.dart';
 //import 'package:myapp/login.dart';
 import 'homepage.dart';
@@ -6,7 +9,6 @@ import 'ayarlar.dart';
 import 'giris.dart';
 import 'kesfet.dart';
 import 'Deneme/deneme.dart';
-import 'deneme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
       //      home: const Kesfet(),
       // home: const Discover(),
       //home: const LoginPage(),
-      initialRoute: '/', // Uygulama açıldığında hangi sayfa gelsin
+      initialRoute: '/DinamikDrawerLogin', // Uygulama açıldığında hangi sayfa gelsin
       routes: {
         '/': (context) => HomePage(),
         '/giris': (context) => Giris(),
@@ -36,7 +38,9 @@ class MyApp extends StatelessWidget {
         '/Kesfet': (context) => Kesfet(),
         '/Discover': (context) => Discover(),
         '/Deneme': (context) => Deneme(),
-        '/AnaEkran': (context) => AnaEkran(),
+        '/DinamikDrawerLogin': (context) => LoginView(),
+        '/DinamikDrawer': (context) => DinamikDrawer(),
+        '/BottomNavigationUygulaması': (context) => MainLayoutView(),
       },
     );
   }
