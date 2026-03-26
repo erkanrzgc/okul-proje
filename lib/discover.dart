@@ -8,13 +8,13 @@ import 'giris.dart';
 class Discover extends StatefulWidget {
   const Discover({super.key});
   @override
-  State<Discover> createState() => _DiscoverState();
+  State<Discover> createState() => DiscoverState();
 }
 
-class _DiscoverState extends State<Discover> {
-  int _selectedIndex = 0;
+class DiscoverState extends State<Discover> {
+  int selectedIndex = 0;
   // Sayfa Listesi
-  static final List<Widget> _pages = [
+  static final List<Widget> sayfalar = [
     const Center(child: Text('Ana Sayfa', style: TextStyle(fontSize: 24))),
     const Urunler(),
 //    const Center(child: Text('Favoriler', style: TextStyle(fontSize: 24))),
@@ -23,7 +23,7 @@ class _DiscoverState extends State<Discover> {
   ];
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      selectedIndex = index;
     });
   }
 
@@ -34,12 +34,12 @@ class _DiscoverState extends State<Discover> {
       drawer: AppDrawer(),
       body: IndexedStack(
         // Sayfa durumunu korumak için IndexedStack kullanıyoruz
-        index: _selectedIndex,
-        children: _pages,
+        index: selectedIndex,
+        children: sayfalar,
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
+        currentIndex: selectedIndex,
         selectedItemColor: Colors.teal,
         unselectedItemColor: const Color.fromRGBO(158, 158, 158, 1),
         onTap: _onItemTapped, // Tıklama olayını yönetiyoruz

@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       //      home: const Kesfet(),
       // home: const Discover(),
       //home: const LoginPage(),
-      initialRoute: '/DinamikDrawerLogin', // Uygulama açıldığında hangi sayfa gelsin
+      initialRoute: '/BottomNavigationUygulamasi', // Uygulama açıldığında hangi sayfa gelsin
       routes: {
         '/': (context) => HomePage(),
         '/giris': (context) => Giris(),
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         '/Deneme': (context) => Deneme(),
         '/DinamikDrawerLogin': (context) => LoginView(),
         '/DinamikDrawer': (context) => DinamikDrawer(),
-        '/BottomNavigationUygulaması': (context) => MainLayoutView(),
+        '/BottomNavigationUygulamasi': (context) => MainLayoutView(),
       },
     );
   }

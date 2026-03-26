@@ -9,9 +9,9 @@ final List<Baglanti> menuelemanlari;
   const AppDrawer({super.key, required this.menuelemanlari});
 
   @override
-  State<AppDrawer> createState() => _AppDrawerState();
+  State<AppDrawer> createState() => AppDrawerState();
 }
-class _AppDrawerState extends State<AppDrawer> {
+class AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -40,7 +40,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     Navigator.pop(context);
                   },
                 )
-                ).toList(),
+                ),
           ],
         ),
     );

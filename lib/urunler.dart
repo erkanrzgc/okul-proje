@@ -21,16 +21,16 @@ class Urunler extends StatelessWidget {
         child: Column(
           children: [
             // Arama Çubuğu
-            _buildSearchBar(),
+            buildSearchBar(),
             const SizedBox(height: 20),
             // Kampanya Kartı
-            _buildHeroCard(),
+            buildHeroCard(),
             const SizedBox(height: 25),
             // Kategoriler
-            _buildCategoryList(),
+            buildCategoryList(),
             const SizedBox(height: 25),
             // Feed
-            _buildVerticalFeed(),
+            buildVerticalFeed(),
           ],
         ),
       ),
@@ -38,7 +38,7 @@ class Urunler extends StatelessWidget {
   }
 
   // Yardımcı Widgetlar (Kodun okunabilirliği için ayırdım)
-  Widget _buildSearchBar() {
+  Widget buildSearchBar() {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15), border: Border.all(color: Colors.grey.shade300)),
@@ -46,7 +46,7 @@ class Urunler extends StatelessWidget {
     );
   }
 
-  Widget _buildHeroCard() {
+  Widget buildHeroCard() {
     return Container(
       height: 160, width: double.infinity, padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -65,7 +65,7 @@ class Urunler extends StatelessWidget {
     );
   }
 
-  Widget _buildCategoryList() {
+  Widget buildCategoryList() {
     return SizedBox(
       height: 90,
       child: ListView.builder(
@@ -77,7 +77,7 @@ class Urunler extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20),
             child: Column(
               children: [
-                CircleAvatar(backgroundColor: colors[index].withOpacity(0.1), child: Icon(Icons.category, color: colors[index])),
+                CircleAvatar(backgroundColor: colors[index], child: Icon(Icons.category, color: colors[index])),
                 const SizedBox(height: 5),
                 Text('Kat ${index + 1}', style: const TextStyle(fontSize: 12)),
               ],
@@ -88,7 +88,7 @@ class Urunler extends StatelessWidget {
     );
   }
 
-  Widget _buildVerticalFeed() {
+  Widget buildVerticalFeed() {
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),

@@ -90,7 +90,7 @@ class Kesfet extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white.withOpacity(0.3),
+                      backgroundColor: Colors.white,
                       foregroundColor: Colors.white,
                       elevation: 0,
                     ),
@@ -146,7 +146,7 @@ class Kesfet extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
-                    boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)],
+                    boxShadow: [BoxShadow(color: Colors.black, blurRadius: 10)],
                   ),
                   child: Row(
                     children: [

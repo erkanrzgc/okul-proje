@@ -6,22 +6,22 @@ class DinamikDrawer extends StatefulWidget {
   const DinamikDrawer({super.key});
 
   @override
-  State<DinamikDrawer> createState() => _DinamikDrawerState();
+  State<DinamikDrawer> createState() => DinamikDrawerState();
 }
 
-class _DinamikDrawerState extends State<DinamikDrawer> {
-  final List<Baglanti> _menuelemanlari = [];
+class DinamikDrawerState extends State<DinamikDrawer> {
+  final List<Baglanti> menuElemanlari = [];
 
   // İki farklı metin kutusu için iki controller
-  final TextEditingController _adController = TextEditingController();
-  final TextEditingController _yolController = TextEditingController();
+  final TextEditingController adController = TextEditingController();
+  final TextEditingController yolController = TextEditingController();
 
-  void _elemanEkle() {
-    if (_adController.text.isNotEmpty && _yolController.text.isNotEmpty) {
+  void Elemanekle() {
+    if (adController.text.isNotEmpty && yolController.text.isNotEmpty) {
       setState(() {
-        _menuelemanlari.add(Baglanti(_adController.text, _yolController.text));
-        _adController.clear();
-        _yolController.clear();
+        menuElemanlari.add(Baglanti(adController.text, yolController.text));
+        adController.clear();
+        yolController.clear();
       });
 
       ScaffoldMessenger.of(context).showSnackBar(
@@ -34,13 +34,13 @@ class _DinamikDrawerState extends State<DinamikDrawer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Gelişmiş Dinamik Menü")),
-      drawer: AppDrawer(menuelemanlari: _menuelemanlari,),
+      drawer: AppDrawer(menuelemanlari: menuElemanlari,),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
             TextField(
-              controller: _adController,
+              controller: adController,
               decoration: const InputDecoration(
                 labelText: "Bağlantı Görünen Adı",
                 prefixIcon: Icon(Icons.label),
@@ -49,7 +49,7 @@ class _DinamikDrawerState extends State<DinamikDrawer> {
             ),
             const SizedBox(height: 15),
             TextField(
-              controller: _yolController,
+              controller: yolController,
               decoration: const InputDecoration(
                 labelText: "Bağlantı Yolu (Route/URL)",
                 prefixIcon: Icon(Icons.link),
@@ -58,7 +58,7 @@ class _DinamikDrawerState extends State<DinamikDrawer> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _elemanEkle,
+              onPressed: Elemanekle,
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 55),
                 backgroundColor: Colors.indigo,

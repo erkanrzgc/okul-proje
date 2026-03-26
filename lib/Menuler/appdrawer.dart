@@ -61,11 +61,11 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text('Dinamik Drawer Uygulaması'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/DinamikDrawerUygulaması'),
+            onTap: () => Navigator.pushReplacementNamed(context, '/DinamikDrawerLogin'),
           ),
            ListTile(
             title: const Text('Bottom Navigation Uygulaması'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/BottomNavigationUygulaması'),
+            onTap: () => Navigator.pushReplacementNamed(context, '/BottomNavigationUygulamasi'),
 
           ),
           const Divider(),

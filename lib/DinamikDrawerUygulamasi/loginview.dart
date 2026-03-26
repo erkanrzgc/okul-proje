@@ -6,16 +6,16 @@ class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<LoginView> createState() => LoginViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
-  final TextEditingController _userController = TextEditingController();
-  final TextEditingController _passController = TextEditingController();
+class LoginViewState extends State<LoginView> {
+  final TextEditingController userController = TextEditingController();
+  final TextEditingController passController = TextEditingController();
 
   void girisiTamamla() {
     // Basit bir kontrol mekanizması
-    if (_userController.text == "admin" && _passController.text == "1234") {
+    if (userController.text == "admin" && passController.text == "1234") {
       Navigator.pushNamed(context, '/DinamikDrawer');
       /* Navigator.pushReplacement(
         context,
@@ -38,7 +38,7 @@ class _LoginViewState extends State<LoginView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
-              controller: _userController,
+              controller: userController,
               decoration: const InputDecoration(
                 labelText: "Kullanıcı Adı",
                 border: OutlineInputBorder(),
@@ -46,7 +46,7 @@ class _LoginViewState extends State<LoginView> {
             ),
             const SizedBox(height: 15),
             TextField(
-              controller: _passController,
+              controller: passController,
               obscureText: true,
               decoration: const InputDecoration(
                 labelText: "Şifre",
