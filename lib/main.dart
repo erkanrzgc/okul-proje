@@ -9,7 +9,6 @@ import 'homepage.dart';
 import 'ayarlar.dart';
 import 'giris.dart';
 import 'kesfet.dart';
-import 'Deneme/deneme.dart';
 //import 'AraSinav/arasinavuygulamasi.dart';
 import 'DBSQLiteShared/sharedprefer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -67,7 +66,6 @@ class _MyAppState extends State<MyApp> {
         '/ayarlar': (context) => Ayarlar(baslik: 'Ayar Sayfası'),
         '/Kesfet': (context) => Kesfet(),
         '/Discover': (context) => Discover(),
-        '/Deneme': (context) => Deneme(),
         '/DinamikDrawerLogin': (context) => LoginView(),
         '/DinamikDrawer': (context) => DinamikDrawer(),
         '/BottomNavigationUygulamasi': (context) => MainLayoutView(),
