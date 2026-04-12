@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Menuler/appdrawer.dart';
+
+import 'Menuler/appdrawer.dart';
 
 class Kesfet extends StatelessWidget {
   const Kesfet({super.key});

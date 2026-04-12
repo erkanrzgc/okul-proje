@@ -92,23 +92,7 @@ class AppDrawer extends StatelessWidget {
             onTap: () =>
                 Navigator.pushReplacementNamed(context, '/Deneme'),
           ),
-          /*
-          ListTile(
-            title: const Text('Görev Listesi'),
-            //onTap: () => Navigator.pushReplacementNamed(context, '/taskList'),
-          ),
-          ListTile(
-            title: const Text('Öğrenci Listesi'),
-            //onTap: () => Navigator.pushReplacementNamed(context, '/ogrenciListesi'),
-          ),
-          ListTile(
-            title: const Text('Shared Preferences'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/shared'),
-          ),
-          ListTile(
-            title: const Text('Çıkış yap'),
-            onTap: () => Navigator.pushReplacementNamed(context, '/login'),
-          ),*/
+          
         ],
       ),
     );

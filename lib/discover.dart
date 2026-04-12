@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Menuler/appdrawer.dart';
+import 'Menuler/appdrawer.dart';
 import 'ayarlar.dart';
 import 'urunler.dart';
 import 'giris.dart';

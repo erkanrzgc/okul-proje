@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Menuler/appdrawer.dart';
+
+import 'Menuler/appdrawer.dart';
 
 class LoginPage extends StatefulWidget {
    const LoginPage({super.key});

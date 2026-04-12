@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Menuler/appdrawer.dart';
+
+import 'Menuler/appdrawer.dart';
 
 class Ayarlar extends StatelessWidget {
   const Ayarlar({super.key,required this.baslik});
@@ -25,3 +26,5 @@ class Ayarlar extends StatelessWidget {
     );
   }
 }
+
+
