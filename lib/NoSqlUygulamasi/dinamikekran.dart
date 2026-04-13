@@ -16,7 +16,13 @@ class DinamikWidgetEkraniState extends State<DinamikWidgetEkrani> {
   // ÖNEMLİ: Her satırın içindeki TextField verisini yakalamak için controller listesi
   List<TextEditingController> metinKutusuWidgetlari = [];
 
-
+ Future<void> sqliteKaydet() async{
+   NesneModel yeniNesne = NesneModel(
+       ad: "",
+       soyad: "",
+       numara: ""
+   );
+  }
 
 
   Future<void> Kaydet(NesneModel nesne) async {
@@ -111,8 +117,36 @@ class DinamikWidgetEkraniState extends State<DinamikWidgetEkrani> {
       appBar: AppBar(title: const Text("SQLite Dinamik Kayıt")),
       body: Column(
         children: [
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                ElevatedButton(
+                onPressed: Nesneeklemedialog,
+                child: Text("Pencereyi Aç"),
+               ),
+                ElevatedButton(onPressed: sqliteKaydet, child: Text("İkinci Pencere"),
+                )
+              ]
+            ),
+          ),
+          Expanded(
+          child: ListView.builder(
+            itemCount: displayedtexts.length,
+            itemBuilder: (context, index) {
+              return Card(
+                child: ListTile(
+                  leading: CircleAvatar(child: Text("${index +1}")),
+                  title: Text(displayedtexts[index]),
+                  subtitle: TextField(
+                    controller: metinKutusuWidgetlari[index],
+                  ),
+                ),
 
-
+              );
+            },
+          ),
+          )
         ],
       ),
     );
