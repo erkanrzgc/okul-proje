@@ -16,15 +16,6 @@ class DinamikWidgetEkraniState extends State<DinamikWidgetEkrani> {
   // ÖNEMLİ: Her satırın içindeki TextField verisini yakalamak için controller listesi
   List<TextEditingController> metinKutusuWidgetlari = [];
 
-  Future<void> veritabaninaKaydet() async {
-    NesneModel yeniNesne = NesneModel(
-      ad: metinKutusuWidgetlari[0].text,
-      soyad: metinKutusuWidgetlari[1].text,
-      numara: metinKutusuWidgetlari[2].text,
-    );
-    await Kaydet(yeniNesne);
-
-  }
 
 
 
@@ -120,41 +111,6 @@ class DinamikWidgetEkraniState extends State<DinamikWidgetEkrani> {
       appBar: AppBar(title: const Text("SQLite Dinamik Kayıt")),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                  onPressed: Nesneeklemedialog,
-                  child: const Text("Dinamik Form Aç"),
-                ),
-                ElevatedButton(
-                  onPressed: veritabaninaKaydet, // SQLite kayıt tetikleniyor
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.green, foregroundColor: Colors.white),
-                  child: const Text("SQLite'a Kaydet"),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: displayedtexts.length,
-              itemBuilder: (context, index) {
-                return Card(
-                  margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                  child: ListTile(
-                    leading: CircleAvatar(child: Text("${index + 1}")),
-                    title: Text(displayedtexts[index]),
-                    subtitle: TextField(
-                      controller: metinKutusuWidgetlari[index], // Veriyi buradan okuyacağız
-                      decoration: const InputDecoration(hintText: "Cevabınızı buraya yazın..."),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
 
 
         ],
