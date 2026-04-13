@@ -5,6 +5,7 @@ import 'package:myapp/DinamikDrawerUygulamasi/dinamikdraweruygulamasi.dart';
 import 'package:myapp/DinamikDrawerUygulamasi/loginview.dart';
 import 'package:myapp/discover.dart';
 //import 'package:myapp/login.dart';
+import 'NoSqlUygulamasi/dinamikekran.dart';
 import 'homepage.dart';
 import 'ayarlar.dart';
 import 'giris.dart';
@@ -59,7 +60,7 @@ class _MyAppState extends State<MyApp> {
       // 5. Tema burada dinamik olarak değişiyor
       theme: temaDurumu ? ThemeData.dark() : ThemeData.light(),
       
-      initialRoute: '/NotArayuz',
+      initialRoute: '/DinamikEkran',
       routes: {
         '/': (context) => HomePage(),
         '/giris': (context) => Giris(),
@@ -76,6 +77,7 @@ class _MyAppState extends State<MyApp> {
               temaGuncelle: temaDegistir,
             ),
         '/NotArayuz': (context) => NotArayuz(),
+        '/DinamikEkran': (context) => DinamikWidgetEkrani(),
       },
     );
   }

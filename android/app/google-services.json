@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "312649231657",
+    "project_id": "bim324-192d4",
+    "storage_bucket": "bim324-192d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312649231657:android:5e2c25c32a4bb308af5b38",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAZFzMz75iMxTGNlCp-F4zj1gnzMPPkkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
