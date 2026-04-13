@@ -18,9 +18,9 @@ class DinamikWidgetEkraniState extends State<DinamikWidgetEkrani> {
 
  Future<void> sqliteKaydet() async{
    NesneModel yeniNesne = NesneModel(
-       ad: "",
-       soyad: "",
-       numara: ""
+       ad: metinKutusuWidgetlari[0].text,
+       soyad: metinKutusuWidgetlari[1].text,
+       numara: metinKutusuWidgetlari[2].text, p
    );
   }
 
