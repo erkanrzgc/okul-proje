@@ -42,7 +42,7 @@ class VeriTabani {
     ''');
   }
   // SQL ile not ekle
-  Future<int> createNoteWithRawSQL(NesneModel nesne) async {
+  Future<int> insertNoteWithRawSQL(NesneModel nesne) async {
     final db = await instance.yeniVeriTabani;
     return await db.rawInsert(
       'INSERT INTO NesneTablosu(name, surname, no) VALUES(?, ?, ?)',
